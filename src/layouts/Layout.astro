@@ -3,7 +3,7 @@ interface Props {
   title: string;
   url: string;
 }
-const { title } = Astro.props;
+const { title, url } = Astro.props;
 import { basics } from "@cv";
 const { summary } = basics;
 ---
@@ -13,15 +13,32 @@ const { summary } = basics;
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
+
+    <!-- SEO básico -->
     <meta name="description" content={summary} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/cv-02.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph (para compartir en WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={summary} />
+    <meta property="og:image" content="https://music-house-local.s3.us-east-1.amazonaws.com/victor-04.png" /> 
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card (opcional) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={summary} />
+    <meta name="twitter:image" content="https://music-house-local.s3.us-east-1.amazonaws.com/victor-04.png" />
   </head>
+
   <body>
     <slot />
   </body>
 </html>
+
 <style is:global>
   html {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -46,12 +63,7 @@ const { summary } = basics;
   *::after {
     box-sizing: border-box;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-family:
       system-ui,
@@ -68,24 +80,21 @@ const { summary } = basics;
   }
   p {
     color: #666;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 0;
-  overflow-wrap: break-word;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    overflow-wrap: break-word;
   }
   @media print {
     .no-print {
       display: none !important;
     }
-
     #print {
       display: block !important;
     }
-
     astro-dev-toolbar {
       display: none !important;
     }
-
     article {
       break-inside: avoid;
     }
