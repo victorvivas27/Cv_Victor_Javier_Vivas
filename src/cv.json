@@ -1,0 +1,362 @@
+{
+  "basics": {
+    "name": "Victor Javier Vivas",
+    "label": "Data Analyst | Qlik Sense | Power Bi | Java | Spring Boot",
+    "image": "/victor-04.png",
+    "email": "victorjaviervivas@gmail.com",
+    "phone": "+56986348085",
+    "url": "",
+    "summary": "Analista de Datos y Desarrollador Java con conocimientos en Qlik Sense, Power BI, SQL, Java y Spring Boot. Me interesa la búsqueda y optimización de información para mejorar la toma de decisiones estratégicas. Trabajo con herramientas de visualización y bases de datos para obtener insights que contribuyan al crecimiento y eficiencia de los proyectos. Como desarrollador Java, utilizo Spring Boot para construir soluciones funcionales y escalables, aplicando buenas prácticas de desarrollo y principios de programación orientada a objetos. Busco aprender continuamente y afrontar nuevos desafíos que me permitan crecer en el mundo de la tecnología.",
+    "location": {
+      "address": "",
+      "postalCode": "7550000",
+      "city": "Region Metropolitana",
+      "countryCode": "CL",
+      "region": "Las Condes"
+    },
+    "nationality": {
+      "country": "Argentino",
+      "provincia": "Cordoba",
+      "localidad": "Rio Ceballos",
+      "countryCode": "AR"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "victorvivas27",
+        "url": "https://github.com/victorvivas27"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "Victor Javier Vivas",
+        "url": "https://www.linkedin.com/in/victor-javier-vivas-2923b21bb/"
+      },
+      {
+        "network": "CertificadoDigitalHouse",
+        "username": "Victor Javier Vivas",
+        "url": "https://myshop-victor.s3.us-east-1.amazonaws.com/1734127358307-3248a4e7-2882-4a55-8afa-af4a8cddcf00_1.jpg"
+      },
+      {
+        "network": "CertificadoJupiDigital",
+        "username": "Victor Javier Vivas",
+        "url": "https://myshop-victor.s3.us-east-1.amazonaws.com/1734127267132-c9662743-4e8b-4c8d-b23d-3b7621d116f5_1.jpg"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Globant Chile",
+      "position": "Pasantía como Desarrollador Java",
+      "url": "",
+      "startDate": "2024-10-17",
+      "endDate": "2024-12-19",
+      "summary": "Realice una  pasantía en Globant Chile como Desarrollador Java.Experimentado con tecnologías como Java y Spring Boot, aprendiendo sobre estructura de datos, pruebas unitarias y Spring Security. También he tenido contacto con metodologías ágiles como Scrum. A lo largo de la pasantía, he contado con el apoyo de mentores, lo que me ha permitido conocer nuevas herramientas y mejorar mis habilidades.",
+      "highlights": [
+        "Participación en el desarrollo de aplicaciones utilizando Java y Spring Boot.",
+        "Colaboración con un equipo interdisciplinario para diseñar soluciones efectivas y escalables.",
+        "Aplicación de buenas prácticas de desarrollo, como control de versiones y pruebas unitarias.",
+        "Adquisición de experiencia en metodologías ágiles y herramientas de colaboración en entornos de desarrollo profesional."
+      ]
+    },
+    {
+      "name": "CNH Industrial",
+      "position": "Operario de Pintura en Cabina",
+      "url": "",
+      "startDate": "2012-10-01",
+      "endDate": "2020-02-01",
+      "summary": "Participé en la fabricación de maquinaria agrícola y de construcción, especializado en la aplicación de pintura en cabina para acabados de alta calidad aplicando World Class Manufacturing (WCM)",
+      "highlights": [
+        "Aplicación de pinturas y recubrimientos en cabina, asegurando acabados uniformes y duraderos.",
+        "Mantenimiento y calibración de equipos de pintura para garantizar un rendimiento óptimo.",
+        "Control de calidad del trabajo final, incluyendo la inspección de acabados y corrección de imperfecciones.",
+        "Colaboración en la implementación de mejoras en los procesos de pintura para aumentar la eficiencia y reducir el desperdicio."
+      ]
+    },
+    {
+      "name": "DX SRL DIXTRON",
+      "position": "Operario de Inyección de Plástico",
+      "url": "",
+      "startDate": "2012-10-01",
+      "endDate": "2012-10-01",
+      "summary": "Participé en la fabricación de envases y embalajes mediante el proceso de inyección de plástico, asegurando la calidad y eficiencia en la producción.",
+      "highlights": [
+        "Operación de maquinaria de inyección de plástico para la producción de envases y embalajes.",
+        "Inspección y control de calidad de productos plásticos para garantizar conformidad con las especificaciones.",
+        "Mantenimiento básico de equipos y ajuste de parámetros para optimizar el proceso de inyección.",
+        "Colaboración con el equipo para mejorar la eficiencia en la línea de producción y reducir defectos."
+      ]
+    },
+    {
+      "name": "RODRIGUEZ ROQUE RAM.",
+      "position": "Ayudante construccion",
+      "url": "",
+      "startDate": "2012-09-01",
+      "endDate": "2012-10-01",
+      "summary": "Construccion de grandes edificios.",
+      "highlights": [
+        ""
+      ]
+    },
+    {
+      "name": "LEQUIPE MONTEUR S.A.",
+      "position": "Operario de Inyección de Plástico",
+      "url": "",
+      "startDate": "2010-10-01",
+      "endDate": "2012-05-01",
+      "summary": "Participé en la fabricación de grandes conjuntos plásticos para el interior y exterior de automóviles, manejando procesos de inyección de plástico para producir componentes de alta calidad.",
+      "highlights": [
+        "Operación de maquinaria de inyección de plástico para producir componentes automotrices.",
+        "Inspección y control de calidad de piezas plásticas, asegurando que cumplieran con las especificaciones técnicas y estándares de la industria.",
+        "Ajuste y mantenimiento de máquinas para optimizar el rendimiento y la precisión del proceso de inyección.",
+        "Colaboración con el equipo para implementar mejoras en el proceso y reducir defectos de producción."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "JupiDigital",
+      "url": "https://www.jupidigital.com/",
+      "area": "Analista de Datos",
+      "studyType": "Analista de datos tiene la habilidad de explorar, interpretar y comprender datos para crear reportes visuales y comunicarlos a modo de información que sirva para la toma de decisiones",
+      "startDate": "2024-07-21",
+      "endDate": "2024-12-13",
+      "score": "",
+      "courses": [
+        ""
+      ]
+    },
+    {
+      "institution": "DIGITAL HOUSE",
+      "url": "https://www.digitalhouse.com/productos/programacion/certified-tech-developer?utm_source=Sendgrid&utm_medium=email&utm_campaign=Inscripcion&utm_term=certificaciones&utm_content=certificaciones-ctaboton-Certificaciones40off",
+      "area": "Certified Tech Develoment",
+      "studyType": "Es una iniciativa educativa co-creada por Digital House, Mercado Libre y Globant.",
+      "startDate": "2022-10-01",
+      "endDate": "2024-09-01",
+      "score": "",
+      "courses": [
+        ""
+      ]
+    },
+    {
+      "institution": "ISADA",
+      "url": "http://www.isada.edu.ar/",
+      "area": "Secundario",
+      "studyType": "Bachiller con Orientación en Economía y Administración",
+      "startDate": "2020-02-01",
+      "endDate": "2023-05-01",
+      "score": "",
+      "courses": [
+        ""
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Qlik Sense",
+      "level": "Beginner",
+      "keywords": [
+        "Data Visualization",
+        "Business Intelligence",
+        "Data Integration",
+        "ETL",
+        "Dashboarding"
+      ]
+    },
+    {
+      "name": "Power BI",
+      "level": "Beginner",
+      "keywords": [
+        "Data Visualization",
+        "Business Intelligence",
+        "Reporting",
+        "Dashboards",
+        "DAX",
+        "Power Query"
+      ]
+    },
+    {
+      "name": "Snowflake",
+      "level": "Beginner",
+      "keywords": [
+        "Cloud Data Warehouse",
+        "SQL",
+        "Data Integration",
+        "ETL",
+        "Data Modeling",
+        "Scalable Storage"
+      ]
+    },
+    {
+      "name": "Database Management",
+      "level": "Intermediate",
+      "keywords": [
+        "MySQL"
+      ]
+    },
+    {
+      "name": "Web Development",
+      "level": "Advanced",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React"
+      ]
+    },
+    {
+      "name": "Backend Development",
+      "level": "Intermediate",
+      "keywords": [
+        "Java",
+        "Spring Boot",
+        "Postman",
+        "Git"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Beginner",
+      "keywords": [
+        "Docker",
+        "AWS",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Testing and Quality Assurance",
+      "level": "Intermediate",
+      "keywords": [
+        "Unit Testing",
+        "Postman"
+      ]
+    },
+    {
+      "name": "Security",
+      "level": "Beginner",
+      "keywords": [
+        "Authentication",
+        "Authorization"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Music House",
+      "isActive": true,
+      "description": "Plataforma full-stack para alquiler de instrumentos musicales. Backend en Spring Boot con JWT, paginación, caché y base de datos PostgreSQL; frontend en React con Vite, Material UI y gestión de imágenes en AWS S3.",
+      "highlights": [
+        "Spring Boot + JWT + PostgreSQL + Caffeine Cache",
+        "React + Vite + Material UI",
+        "Gestión de imágenes en AWS S3",
+        "Calendario dinámico para reservas",
+        "Calificación: 10/10"
+      ],
+      "url": "https://musichouse.up.railway.app/"
+    },
+    {
+      "name": "Tienda Super Héroes",
+      "isActive": true,
+      "description": "Sitio web estático desarrollado con HTML y CSS. Incluye página de inicio y formulario de contacto, enfocado en diseño visual y estructura semántica.",
+      "highlights": [
+        "HTML5 y CSS3",
+        "Optimización de maquetado web",
+        "Calificación: 10/10"
+      ],
+      "url": "https://victorvivas27.github.io/TiendaSuperHeroes/"
+    },
+    {
+      "name": "Tienda Pet Shop",
+      "isActive": true,
+      "description": "Proyecto de tienda de mascotas enfocado en HTML, CSS y JavaScript. Agrega validaciones de formularios y mensajes dinámicos para mejorar la experiencia de usuario.",
+      "highlights": [
+        "Validación de formularios con JavaScript",
+        "HTML5, CSS3 y diseño responsive",
+        "Calificación: 10/10"
+      ],
+      "url": "https://victorvivas27.github.io/pet-shop/"
+    },
+    {
+      "name": "Clínica Odontológica",
+      "isActive": true,
+      "description": "Aplicación React para gestión de pacientes, usando rutas protegidas, contexto global con useReducer y localStorage para manejo de favoritos.",
+      "highlights": [
+        "React Router DOM",
+        "Context API + useReducer",
+        "Persistencia en localStorage",
+        "Calificación: 10/10"
+      ],
+      "url": "https://clinicaodontologicaexamenfrontend3.netlify.app/"
+    },
+    {
+      "name": "Mouse Seguir",
+      "isActive": true,
+      "description": "Proyecto interactivo en React que rastrea el movimiento del mouse. Implementa eventos dinámicos para cambiar el estilo del puntero.",
+      "highlights": [
+        "Eventos de puntero dinámicos",
+        "Manejo de clases CSS en React",
+        "Interactividad avanzada",
+        "Calificación: 10/10"
+      ],
+      "url": "https://mousesegir.netlify.app"
+    }
+  ]
+}

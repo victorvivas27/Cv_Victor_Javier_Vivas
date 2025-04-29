@@ -1,0 +1,11 @@
+---
+import Section from "@/components/Section.astro";
+import {basics} from "@cv"
+const {summary}=basics
+// Reemplazar puntos por saltos de línea HTML
+const formattedSummary = summary.replace(/\. /g, ".<br><br>");
+---
+
+<Section title="Sobre mí">
+  <p set:html={formattedSummary}></p>
+</Section>

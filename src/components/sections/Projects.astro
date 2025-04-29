@@ -1,0 +1,177 @@
+---
+import Section from "@/components/Section.astro";
+import { projects } from "@cv";
+---
+
+<Section title="Proyectos">
+  <ul class="projects-grid">
+    {
+      projects.map(({ url, description, highlights, name, isActive }) => {
+        return (
+          <li class="project-item">
+            <article class="project-card">
+              <header class="project-header">
+                <h3 class="project-title">
+                  {isActive && <span class="active-indicator">•</span>}
+                  <a href={url} target="_blank" rel="noopener noreferrer" class="project-link">
+                    {name}
+                  </a>
+                </h3>
+                <p class="project-description">{description}</p>
+              </header>
+              <footer class="project-highlights">
+                {highlights.map((highlight) => (
+                  <span class="highlight-badge">{highlight}</span>
+                ))}
+              </footer>
+            </article>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  /* Variables de diseño */
+  :root {
+    --project-bg: #ffffff;
+    --project-border: #e2e8f0;
+    --project-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --highlight-bg: #f1f5f9;
+    --highlight-color: #334155;
+    --active-color: #10b981;
+    --link-color: #3b82f6;
+    --link-hover: #2563eb;
+  }
+
+  /* Grid de proyectos */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  /* Tarjeta de proyecto */
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--project-bg);
+    border: 1px solid var(--project-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--project-shadow);
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Encabezado */
+  .project-header {
+    margin-bottom: 1rem;
+    flex: 1;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #1e293b;
+  }
+
+  .active-indicator {
+    color: var(--active-color);
+    font-size: 1.8rem;
+    line-height: 1;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+
+  .project-link {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .project-link:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #64748b;
+    margin: 0;
+  }
+
+  /* Badges de tecnologías */
+  .project-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+
+  .highlight-badge {
+    background: var(--highlight-bg);
+    color: var(--highlight-color);
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media print {
+  .projects-grid {
+    gap: 0.5rem; /* reducir separación entre tarjetas */
+  }
+
+  .project-card {
+    padding: 0.5rem; /* menos padding dentro de la tarjeta */
+    border: 1px solid #ccc; /* mantener borde leve para separación visual */
+    box-shadow: none; /* sin sombra para impresión limpia */
+  }
+
+  .project-title {
+    font-size: 1rem; /* título más pequeño */
+    margin-bottom: 0.2rem;
+  }
+
+  .project-description {
+    font-size: 0.7rem; /* descripción más pequeña */
+    line-height: 1.2; /* línea más apretada */
+  }
+
+  .highlight-badge {
+    font-size: 0.6rem; /* más compacto */
+    padding: 0.2rem 0.5rem;
+  }
+
+  .project-highlights {
+    gap: 0.3rem; /* menos espacio entre highlights */
+  }
+}
+</style>

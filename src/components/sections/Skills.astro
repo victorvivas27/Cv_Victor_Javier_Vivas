@@ -1,0 +1,137 @@
+---
+import Section from "@/components/Section.astro";
+import { skills } from "@cv";
+---
+
+<Section title="Tecnologías y Herramientas">
+  <div class="skills-container">
+    {skills.map(({ name, keywords }) => (
+      <div class="skill-category">
+        <h3 class="category-title">{name}</h3>
+        <div class="keywords-grid">
+          {keywords.map((keyword) => (
+            <span class="keyword-pill">{keyword}</span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</Section>
+
+<style>
+  /* Estilos generales */
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .skill-category {
+    break-inside: avoid; /* Evita que se divida en páginas al imprimir */
+    margin-bottom: 0.70rem;
+  }
+
+  .category-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin: 0 0 0.5rem 0;
+    border-bottom: 1px solid #e2e8f0;
+   
+  }
+
+  .keywords-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .keyword-pill {
+    font-size: 0.75rem;
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid #e2e8f0;
+  }
+
+  /* Estilos específicos para impresión */
+  @media print {
+    .skills-container {
+      gap: 0.5rem;
+    }
+
+    .skill-category {
+      margin-bottom: 0.5rem;
+      page-break-inside: avoid;
+    }
+
+    .category-title {
+      font-size: 0.9rem;
+      color: #000 !important;
+      border-bottom: 1px solid #ddd !important;
+    }
+
+    .keyword-pill {
+      font-size: 0.7rem;
+      background: transparent !important;
+      border: 1px solid #ccc !important;
+      color: #000 !important;
+      padding: 0.15rem 0.6rem;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Optimizar espacio */
+    .keywords-grid {
+      gap: 0.3rem;
+    }
+  }
+
+  /* Diseño responsive para pantalla */
+  @media screen and (max-width: 768px) {
+    .category-title {
+      font-size: 0.95rem;
+    }
+    
+    .keyword-pill {
+      font-size: 0.7rem;
+    }
+  }
+  @media print {
+  .skills-container {
+    gap: 0.25rem; /* Menor separación */
+  }
+
+  .skill-category {
+    margin-bottom: 0.25rem; /* Más compacto */
+    page-break-inside: avoid;
+  }
+
+  .category-title {
+    font-size: 0.8rem; /* Título más chico */
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #000 !important;
+    border-bottom: 1px solid #ccc !important;
+    padding-bottom: 0.15rem;
+  }
+
+  .keywords-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem; /* Menor espacio entre keywords */
+  }
+
+  .keyword-pill {
+    font-size: 0.65rem; /* Más chico */
+    padding: 0.15rem 0.5rem; /* Más estrecho */
+    background: transparent !important;
+    color: #000 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 12px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+</style>

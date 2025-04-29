@@ -1,0 +1,187 @@
+---
+import Section from "@/components/Section.astro";
+import { work } from "@cv";
+const {} = work;
+---
+
+<Section title="Experiencia laboral">
+  <ul class="experience-list">
+    {
+      work.map(
+        ({ name, position, url, startDate, endDate, summary }) => {
+          const formatDate = (date: string | number | Date) =>
+            new Date(date).toLocaleDateString("es-ES", { 
+              year: "numeric", 
+              month: "short" 
+            }).replace(".", "");
+
+          const startFormatted = formatDate(startDate);
+          const endFormatted = endDate ? formatDate(endDate) : "Actual";
+          
+          return (
+            <li class="experience-item">
+              <article class="experience-card">
+                <header class="experience-header">
+                  <div class="experience-titles">
+                    <h3 class="company-name">{name}</h3>
+                    <h4 class="job-position">{position}</h4>
+                  </div>
+                  <time class="experience-period">{startFormatted} — {endFormatted}</time>
+                </header>
+
+                <div class="experience-content">
+                  <p class="job-summary">{summary}</p>
+                </div>
+              </article>
+            </li>
+          );
+        }
+      )
+    }
+  </ul>
+</Section>
+
+<style>
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .experience-item {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .experience-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    top: 2rem;
+    bottom: -2rem;
+    width: 2px;
+    background: linear-gradient(to bottom, #e2e8f0, #cbd5e1);
+  }
+
+  .experience-card {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+  }
+
+  .experience-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .experience-titles {
+    flex: 1;
+  }
+
+  .company-name {
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .job-position {
+    color: #475569;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .experience-period {
+    color: #64748b;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    padding-top: 0.125rem;
+  }
+
+  .job-summary {
+    color: #334155;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 700px) {
+    .experience-header {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    
+    .experience-period {
+      align-self: flex-start;
+      font-size: 0.8rem;
+    }
+
+    .experience-item {
+      padding-left: 1.25rem;
+    }
+
+    .experience-item::after {
+      left: 0.375rem;
+    }
+  }
+  @media print {
+  .experience-list {
+    gap: 1rem; /* Menor separación entre experiencias */
+  }
+
+  .experience-card {
+    padding: 0.70rem; /* Reducir padding interno */
+    box-shadow: none; /* Sin sombra */
+    border: 1px solid #ccc; /* Borde simple */
+    background: #fff;
+  }
+
+  .company-name {
+    font-size: 1rem; /* Empresa más chico */
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  .job-position {
+    font-size: 0.9rem; /* Posición más compacta */
+    font-weight: 500;
+  }
+
+  .experience-period {
+    font-size: 0.7rem; /* Fecha más chica */
+    color: #555;
+  }
+
+  .job-summary {
+    font-size: 0.8rem; /* Descripción breve */
+    line-height: 1.3;
+  }
+
+  .experience-header {
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .experience-item {
+    padding-left: 0.70rem; /* Menos espacio a la izquierda */
+  }
+
+  .experience-item::after {
+    left: 0.20rem; /* Línea vertical más ajustada */
+  }
+}
+</style>
