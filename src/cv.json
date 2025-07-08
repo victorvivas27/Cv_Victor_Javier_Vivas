@@ -126,6 +126,31 @@
     }
   ],
   "education": [
+
+{
+  "institution": "Desafío Latam",
+  "url": "https://desafiolatam.com/fundamentos-test-automation-engineer",
+  "area": "Test Automation Engineer",
+  "studyType": "Bootcamp intensivo orientado a la automatización de pruebas web, API y móviles.",
+  "startDate": "2025-06-17",
+  "endDate": "",
+  "score": "",
+  "courses": [
+    ""
+  ]
+},
+{
+  "institution": "Desafío Latam",
+  "url": "https://desafiolatam.com/data-analytics/",
+  "area": "Data Analytics",
+  "studyType": "Bootcamp intensivo orientado a análisis de datos, SQL, Python, estadísticas e inteligencia artificial.",
+  "startDate": "2025-06-24",
+  "endDate": "",
+  "score": "",
+  "courses": [
+    ""
+  ]
+},
     {
       "institution": "JupiDigital",
       "url": "https://www.jupidigital.com/",
