@@ -1,92 +1,324 @@
-<footer id="action-footer" class="no-print">
-  <button id="btn-print" class="fab" aria-label="Imprimir / Guardar PDF">
-    <!-- ícono impresora -->
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.6"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path d="M6 9V3h12v6"></path>
-      <path
-        d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"
-      ></path>
-      <path d="M6 14h12v7H6z"></path>
-    </svg>
-    <span>Imprimir</span>
-  </button>
+---
+import { basics } from "@cv";
+
+// TUS ICONOS (componentes .astro)
+import Facebook from "@/icons/Facebook.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+// Ojo: en tu repo está escrito "GitHup.astro"
+import GitHubIcon from "@/icons/GitHup.astro";
+import Earth from "@/icons/Earth.astro";
+
+import CertificadoDigitalHouse from "@/icons/certificadoDigital.astro";
+import CertificadoJupiDigital from "@/icons/certificadoJupiDigital.astro";
+import CertificadoDesafioLatamTest from "@/icons/certificadoDesafioLatamTest.astro";
+import CertificadoDesafioLatamSQL from "@/icons/certificadoDesafioLatamSQL.astro";
+
+const { profiles = [] } = basics;
+
+// Mapa: nombre de `network` -> componente de icono
+const SOCIAL_ICONS: Record<string, any> = {
+  Facebook,
+  GitHub: GitHubIcon, // por si en cv.json viene "GitHub"
+  GitHup: GitHubIcon, // por si la key viene con el nombre del archivo
+  LinkedIn,
+  CertificadoDigitalHouse,
+  CertificadoJupiDigital,
+  CertificadoDesafioLatamTest,
+  CertificadoDesafioLatamSQL,
+};
+
+// SVG de impresora (inline)
+const PRINTER_SVG = `
+<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+  <path fill="currentColor" d="M6 9V4h12v5h1a3 3 0 0 1 3 3v5h-4v3H6v-3H2v-5a3 3 0 0 1 3-3h1Zm2-3h8v3H8V6Zm8 11H8v3h8v-3Z"/>
+</svg>`;
+
+// Construimos los items desde tu cv.json
+const items = profiles.map(({ network, url }) => ({
+  id: network,
+  title: `Visitar ${network}`,
+  url,
+  Icon: SOCIAL_ICONS[network] ?? Earth, // fallback a Earth si no hay icono
+}));
+
+// Agregamos el comando "Imprimir"
+items.push({
+  id: "print",
+  title: "Imprimir página",
+  url: "#",
+  Icon: null, // usamos el SVG inline
+});
+---
+
+<!-- Footer escritorio -->
+<footer id="cp-footer" class="no-print">
+  Pulsa <kbd>⌘</kbd>+<kbd>K</kbd> (macOS) o <kbd>Ctrl</kbd>+<kbd>K</kbd> (Windows/Linux)
+  para abrir comandos.
 </footer>
 
+<!-- Botón flotante (móvil) -->
+<button id="cp-open" class="cp-fab no-print" aria-label="Abrir comandos"
+  >⌘</button
+>
+
+<!-- Modal -->
+<div id="cp-modal" class="cp-backdrop cp-hidden no-print" aria-hidden="true">
+  <div
+    class="cp-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cp-title"
+  >
+    <button id="cp-close" class="cp-close" aria-label="Cerrar">✕</button>
+    <h2 id="cp-title" class="cp-title">Comandos</h2>
+
+    <ul class="cp-list">
+      {
+        items.map((it) => (
+          <li class="cp-item" data-id={it.id}>
+            <span class="cp-icon">
+              {it.id === "print" ? (
+                <span class="cp-icon-svg" set:html={PRINTER_SVG} />
+              ) : (
+                <it.Icon class="cp-icon-svg" />
+              )}
+            </span>
+
+            {it.id === "print" ? (
+              <button class="cp-link cp-btn">{it.title}</button>
+            ) : (
+              <a
+                class="cp-link"
+                href={it.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {it.title}
+              </a>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const printBtn = document.getElementById("btn-print");
-    printBtn?.addEventListener(
-      "click",
-      () => {
-        window.print(); 
-      },
-      { passive: true },
-    );
+  const modal = document.getElementById("cp-modal");
+  const openBtn = document.getElementById("cp-open");
+  const closeBtn = document.getElementById("cp-close");
+
+  const openModal = () => {
+    modal?.classList.remove("cp-hidden");
+    modal?.setAttribute("aria-hidden", "false");
+  };
+  const closeModal = () => {
+    modal?.classList.add("cp-hidden");
+    modal?.setAttribute("aria-hidden", "true");
+  };
+
+  // Abrir/cerrar
+  openBtn?.addEventListener("click", openModal);
+  closeBtn?.addEventListener("click", closeModal);
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Atajo ⌘+K / Ctrl+K
+  document.addEventListener("keydown", (e) => {
+    const isMac = navigator.platform.includes("Mac");
+    const ok =
+      (isMac && e.metaKey && e.key.toLowerCase() === "k") ||
+      (!isMac && e.ctrlKey && e.key.toLowerCase() === "k");
+    if (ok) {
+      e.preventDefault();
+      modal?.classList.contains("cp-hidden") ? openModal() : closeModal();
+    }
+  });
+
+  // Acción imprimir
+  document.querySelectorAll(".cp-item").forEach((li) => {
+    if (li.getAttribute("data-id") === "print") {
+      li.querySelector(".cp-btn")?.addEventListener("click", () => {
+        closeModal();
+        setTimeout(() => window.print(), 80);
+      });
+    }
   });
 </script>
 
 <style>
-  /* Footer fijo y simple */
-  #action-footer {
-    position: fixed;
-    bottom: 12px;
-    right: 12px;
-    z-index: 10000;
+  :root {
+    --cp-bg: #121620;
+    --cp-text: #e0e5f0;
+    --cp-muted: #9ba1b3;
+    --cp-border: #384252;
+    --cp-soft: #232936;
+    --cp-primary: #6c98ea;
+    --cp-primary-600: #4a75c1;
+    --cp-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    --cp-icon-bg: #354157;
+    --cp-icon-border: #4d5c76;
   }
 
-  .fab {
+  /* Footer escritorio */
+  #cp-footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--cp-bg);
+    border-top: 1px solid var(--cp-border);
+    padding: 0.65rem 0.9rem;
+    text-align: center;
+    color: var(--cp-muted);
+    font-size: 0.92rem;
+    z-index: 40;
+  }
+  kbd {
+    background: var(--cp-soft);
+    border: 1px solid var(--cp-border);
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: var(--cp-primary);
+  }
+
+  /* FAB móvil */
+  .cp-fab {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 999px;
+    border: 1px solid var(--cp-border);
+    background: var(--cp-bg);
+    color: var(--cp-text);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-weight: 700;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 45;
+    transition:
+      transform 0.12s ease,
+      box-shadow 0.12s ease;
+  }
+  .cp-fab:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (max-width: 720px) {
+    #cp-footer {
+      display: none;
+    }
+    .cp-fab {
+      display: flex;
+    }
+  }
+
+  /* Backdrop + modal */
+  .cp-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: rgba(18, 22, 32, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .cp-hidden {
+    display: none;
+  }
+
+  .cp-modal {
+    background: var(--cp-bg);
+    color: var(--cp-text);
+    width: 100%;
+    max-width: 520px;
+    border-radius: 14px;
+    box-shadow: var(--cp-shadow);
+    border: 1px solid var(--cp-border);
+    padding: 1.1rem 1rem 1.25rem;
+    position: relative;
+  }
+  .cp-close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    border: 0;
+    background: transparent;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--cp-muted);
+  }
+  .cp-title {
+    margin: 0.2rem 0 1rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.1px;
+  }
+
+  .cp-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .cp-item {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem 0.5rem;
+    border-radius: 10px;
+    transition:
+      background 0.12s ease,
+      transform 0.05s ease;
+  }
+  .cp-item:hover {
+    background: var(--cp-soft);
+    transform: translateY(-1px);
+  }
+
+  .cp-icon {
+    width: 40px;
+    height: 40px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: #111827;
-    color: #fff;
-    border: 1px solid #0b1220;
-    border-radius: 999px;
-    padding: 10px 14px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--cp-icon-bg);
+    border: 1px solid var(--cp-icon-border);
+  }
+  .cp-icon-svg {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+  }
+
+  .cp-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--cp-primary);
     cursor: pointer;
-    transition:
-      transform 0.15s ease,
-      box-shadow 0.15s ease,
-      background 0.15s ease;
-    -webkit-tap-highlight-color: transparent;
+    font: inherit;
+    text-decoration: none;
+  }
+  .cp-link:hover {
+    color: var(--cp-primary-600);
+    text-decoration: underline;
   }
 
-  .fab:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
-  }
-  .fab:active {
-    transform: translateY(0px) scale(0.98);
-  }
-
-  .fab svg {
-    display: block;
-  }
-
-  .fab span {
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-  }
-
-  @media (max-width: 520px) {
-    .fab span {
-      display: none;
-    } /* solo ícono en móviles */
-  }
-
+  /* Ocultar en impresión */
   @media print {
-    #action-footer {
+    .no-print,
+    .cp-backdrop {
       display: none !important;
     }
   }
