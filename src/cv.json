@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Victor Javier Vivas",
-    "label": "Data Analyst | Qlik Sense | Power Bi | Java | Spring Boot",
+    "label": "Data Analyst | Qlik Sense | Power Bi | Java | Spring Boot | Test Automation Engineer",
     "image": "/victor-04.png",
     "email": "victorjaviervivas@gmail.com",
     "phone": "+56986348085",
     "url": "",
-    "summary": "Analista de Datos y Desarrollador Java con conocimientos en Qlik Sense, Power BI, SQL, Java y Spring Boot. Me interesa la búsqueda y optimización de información para mejorar la toma de decisiones estratégicas. Trabajo con herramientas de visualización y bases de datos para obtener insights que contribuyan al crecimiento y eficiencia de los proyectos. Como desarrollador Java, utilizo Spring Boot para construir soluciones funcionales y escalables, aplicando buenas prácticas de desarrollo y principios de programación orientada a objetos. Busco aprender continuamente y afrontar nuevos desafíos que me permitan crecer en el mundo de la tecnología.",
+    "summary": "Soy una persona que desde muy joven ha trabajado en distintos ámbitos, lo que me permitió desarrollar principios sólidos como la honestidad, la puntualidad, el compromiso y la búsqueda constante de calidad en todo lo que hago. Me considero autodidacta y de rápido aprendizaje, siempre dispuesto a asumir nuevos desafíos y a mejorar procesos, especialmente cuando se trata de tareas repetitivas en las que encuentro formas más eficientes de hacer las cosas. Me motiva aportar valor a los equipos con los que trabajo, contribuir al crecimiento de los proyectos y mantener una mentalidad de mejora continua. Mi mayor fortaleza está en la capacidad de adaptarme, aprender y superarme día a día, combinando mis valores personales con la pasión por la tecnología para generar resultados que marquen la diferencia.",
     "location": {
       "address": "",
       "postalCode": "7550000",
@@ -40,10 +40,35 @@
         "network": "CertificadoJupiDigital",
         "username": "Victor Javier Vivas",
         "url": "https://myshop-victor.s3.us-east-1.amazonaws.com/Certificado_Jupi-Digital_Data_Analyst.jpg"
+      },
+      {
+        "network": "CertificadoDesafioLatamTest",
+        "username": "Victor Javier Vivas",
+        "url": "https://myshop-victor.s3.us-east-1.amazonaws.com/certificado-de-participacion-nuevo-test-automation-enginner-21264(3).png"
+      },
+      {
+        "network": "CertificadoDesafioLatamSQL",
+        "username": "Victor Javier Vivas",
+        "url": "https://myshop-victor.s3.us-east-1.amazonaws.com/certificado-aprobacion-de-modulo-nuevo-sql-para-el-analisis-de-datos-g114-21264(3).png"
       }
     ]
   },
   "work": [
+    {
+      "name": "Globant Chile",
+      "position": "Pasantía como Test Automation Engineer",
+      "url": "",
+      "startDate": "2025-08-18",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Participación en el desarrollo de aplicaciones utilizando Java y Spring Boot.",
+        "Colaboración con un equipo interdisciplinario para diseñar soluciones efectivas y escalables.",
+        "Aplicación de buenas prácticas de desarrollo, como control de versiones y pruebas unitarias.",
+        "Adquisición de experiencia en metodologías ágiles y herramientas de colaboración en entornos de desarrollo profesional."
+      ]
+    },
+    
     {
       "name": "Globant Chile",
       "position": "Pasantía como Desarrollador Java",
@@ -71,45 +96,6 @@
         "Control de calidad del trabajo final, incluyendo la inspección de acabados y corrección de imperfecciones.",
         "Colaboración en la implementación de mejoras en los procesos de pintura para aumentar la eficiencia y reducir el desperdicio."
       ]
-    },
-    {
-      "name": "DX SRL DIXTRON",
-      "position": "Operario de Inyección de Plástico",
-      "url": "",
-      "startDate": "2012-10-01",
-      "endDate": "2012-10-01",
-      "summary": "Participé en la fabricación de envases y embalajes mediante el proceso de inyección de plástico, asegurando la calidad y eficiencia en la producción.",
-      "highlights": [
-        "Operación de maquinaria de inyección de plástico para la producción de envases y embalajes.",
-        "Inspección y control de calidad de productos plásticos para garantizar conformidad con las especificaciones.",
-        "Mantenimiento básico de equipos y ajuste de parámetros para optimizar el proceso de inyección.",
-        "Colaboración con el equipo para mejorar la eficiencia en la línea de producción y reducir defectos."
-      ]
-    },
-    {
-      "name": "RODRIGUEZ ROQUE RAM.",
-      "position": "Ayudante construccion",
-      "url": "",
-      "startDate": "2012-09-01",
-      "endDate": "2012-10-01",
-      "summary": "Construccion de grandes edificios.",
-      "highlights": [
-        ""
-      ]
-    },
-    {
-      "name": "LEQUIPE MONTEUR S.A.",
-      "position": "Operario de Inyección de Plástico",
-      "url": "",
-      "startDate": "2010-10-01",
-      "endDate": "2012-05-01",
-      "summary": "Participé en la fabricación de grandes conjuntos plásticos para el interior y exterior de automóviles, manejando procesos de inyección de plástico para producir componentes de alta calidad.",
-      "highlights": [
-        "Operación de maquinaria de inyección de plástico para producir componentes automotrices.",
-        "Inspección y control de calidad de piezas plásticas, asegurando que cumplieran con las especificaciones técnicas y estándares de la industria.",
-        "Ajuste y mantenimiento de máquinas para optimizar el rendimiento y la precisión del proceso de inyección.",
-        "Colaboración con el equipo para implementar mejoras en el proceso y reducir defectos de producción."
-      ]
     }
   ],
   "volunteer": [
@@ -126,35 +112,34 @@
     }
   ],
   "education": [
-
-{
-  "institution": "Desafío Latam",
-  "url": "https://desafiolatam.com/fundamentos-test-automation-engineer",
-  "area": "Test Automation Engineer",
-  "studyType": "Bootcamp intensivo orientado a la automatización de pruebas web, API y móviles.",
-  "startDate": "2025-06-17",
-  "endDate": "",
-  "score": "",
-  "courses": [
-    ""
-  ]
-},
-{
-  "institution": "Desafío Latam",
-  "url": "https://desafiolatam.com/data-analytics/",
-  "area": "Data Analytics",
-  "studyType": "Bootcamp intensivo orientado a análisis de datos, SQL, Python, estadísticas e inteligencia artificial.",
-  "startDate": "2025-06-24",
-  "endDate": "",
-  "score": "",
-  "courses": [
-    ""
-  ]
-},
+    {
+      "institution": "Desafío Latam",
+      "url": "https://desafiolatam.com/data-analytics/",
+      "area": "Data Analytics",
+      "studyType": "Bootcamp intensivo orientado a análisis de datos, SQL, Python, estadísticas e inteligencia artificial.",
+      "startDate": "2025-06-24",
+      "endDate": "",
+      "score": "",
+      "courses": [
+        ""
+      ]
+    },
+    {
+      "institution": "Desafío Latam",
+      "url": "https://desafiolatam.com/fundamentos-test-automation-engineer",
+      "area": "Test Automation Engineer",
+      "studyType": "Bootcamp intensivo orientado a la automatización de pruebas web, API y móviles.",
+      "startDate": "2025-06-17",
+      "endDate": "2025-08-25",
+      "score": "",
+      "courses": [
+        ""
+      ]
+    },
     {
       "institution": "JupiDigital",
       "url": "https://www.jupidigital.com/",
-      "area": "Analista de Datos",
+      "area": "Data Analytics",
       "studyType": "Analista de datos tiene la habilidad de explorar, interpretar y comprender datos para crear reportes visuales y comunicarlos a modo de información que sirva para la toma de decisiones",
       "startDate": "2024-07-21",
       "endDate": "2024-12-13",
@@ -214,6 +199,21 @@
     }
   ],
   "skills": [
+    {
+      "name": "Testing and Quality Assurance",
+      "level": "Intermediate",
+      "keywords": [
+        "Testing Fundamentals",
+        "QA Tools Setup",
+        "Web Test Automation (Cypress, Selenium)",
+        "API Testing (Postman, SuperTest)",
+        "BDD with Playwright",
+        "Mobile Test Automation",
+        "CI/CD, Docker, Cloud Testing",
+        "Project Refinement & Presentation"
+      ]
+    },
+    
     {
       "name": "Qlik Sense",
       "level": "Beginner",
@@ -286,14 +286,6 @@
       ]
     },
     {
-      "name": "Testing and Quality Assurance",
-      "level": "Intermediate",
-      "keywords": [
-        "Unit Testing",
-        "Postman"
-      ]
-    },
-    {
       "name": "Security",
       "level": "Beginner",
       "keywords": [
@@ -329,7 +321,8 @@
       "isActive": true,
       "description": "Plataforma full-stack para alquiler de instrumentos musicales. Backend en Spring Boot con JWT, paginación, caché y base de datos PostgreSQL; frontend en React con Vite, Material UI y gestión de imágenes en AWS S3.",
       "highlights": [
-        "Spring Boot + JWT + PostgreSQL + Caffeine Cache",
+        "Spring Boot + JWT + Caffeine Cache",
+        "PostgreSQL",
         "React + Vite + Material UI",
         "Gestión de imágenes en AWS S3",
         "Calendario dinámico para reservas",
@@ -370,18 +363,6 @@
         "Calificación: 10/10"
       ],
       "url": "https://clinicaodontologicaexamenfrontend3.netlify.app/"
-    },
-    {
-      "name": "Mouse Seguir",
-      "isActive": true,
-      "description": "Proyecto interactivo en React que rastrea el movimiento del mouse. Implementa eventos dinámicos para cambiar el estilo del puntero.",
-      "highlights": [
-        "Eventos de puntero dinámicos",
-        "Manejo de clases CSS en React",
-        "Interactividad avanzada",
-        "Calificación: 10/10"
-      ],
-      "url": "https://mousesegir.netlify.app"
     }
   ]
 }

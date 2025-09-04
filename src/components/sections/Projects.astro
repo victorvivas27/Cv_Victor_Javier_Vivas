@@ -13,7 +13,12 @@ import { projects } from "@cv";
               <header class="project-header">
                 <h3 class="project-title">
                   {isActive && <span class="active-indicator">•</span>}
-                  <a href={url} target="_blank" rel="noopener noreferrer" class="project-link">
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                  >
                     {name}
                   </a>
                 </h3>
@@ -49,7 +54,7 @@ import { projects } from "@cv";
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1rem;
+    gap: 2rem;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -59,13 +64,12 @@ import { projects } from "@cv";
   .project-card {
     display: flex;
     flex-direction: column;
-    height: 100%;
     background: var(--project-bg);
-    border: 1px solid var(--project-border);
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 1rem;
     transition: all 0.3s ease;
     box-shadow: var(--project-shadow);
+    border: #025ff485 1px solid;
   }
 
   .project-card:hover {
@@ -97,9 +101,15 @@ import { projects } from "@cv";
   }
 
   @keyframes pulse {
-    0% { opacity: 0.6; }
-    50% { opacity: 1; }
-    100% { opacity: 0.6; }
+    0% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.6;
+    }
   }
 
   .project-link {
@@ -145,33 +155,33 @@ import { projects } from "@cv";
     }
   }
   @media print {
-  .projects-grid {
-    gap: 0.5rem; /* reducir separación entre tarjetas */
-  }
+    .projects-grid {
+      gap: 0.5rem; /* reducir separación entre tarjetas */
+    }
 
-  .project-card {
-    padding: 0.5rem; /* menos padding dentro de la tarjeta */
-    border: 1px solid #ccc; /* mantener borde leve para separación visual */
-    box-shadow: none; /* sin sombra para impresión limpia */
-  }
+    .project-card {
+      padding: 0.5rem; /* menos padding dentro de la tarjeta */
+      border: 1px solid #ccc; /* mantener borde leve para separación visual */
+      box-shadow: none; /* sin sombra para impresión limpia */
+    }
 
-  .project-title {
-    font-size: 1rem; /* título más pequeño */
-    margin-bottom: 0.2rem;
-  }
+    .project-title {
+      font-size: 1rem; /* título más pequeño */
+      margin-bottom: 0.2rem;
+    }
 
-  .project-description {
-    font-size: 0.7rem; /* descripción más pequeña */
-    line-height: 1.2; /* línea más apretada */
-  }
+    .project-description {
+      font-size: 0.7rem; /* descripción más pequeña */
+      line-height: 1.2; /* línea más apretada */
+    }
 
-  .highlight-badge {
-    font-size: 0.6rem; /* más compacto */
-    padding: 0.2rem 0.5rem;
-  }
+    .highlight-badge {
+      font-size: 0.6rem; /* más compacto */
+      padding: 0.2rem 0.5rem;
+    }
 
-  .project-highlights {
-    gap: 0.3rem; /* menos espacio entre highlights */
+    .project-highlights {
+      gap: 0.3rem; /* menos espacio entre highlights */
+    }
   }
-}
 </style>

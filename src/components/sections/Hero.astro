@@ -9,6 +9,8 @@ import GitHub from "@/icons/GitHup.astro";
 import Earth from "@/icons/Earth.astro";
 import CertificadoDigitalHouse from "@/icons/certificadoDigital.astro";
 import CertificadoJupiDigital from "@/icons/certificadoJupiDigital.astro";
+import CertificadoDesafioLatamTest from "@/icons/certificadoDesafioLatamTest.astro";
+import CertificadoDesafioLatamSQL from "@/icons/certificadoDesafioLatamSQL.astro";
 
 const { name, label, image, email, phone, url, location, profiles } = basics;
 const { address, postalCode, city, countryCode, region } = location;
@@ -18,10 +20,12 @@ const SOCIAL_ICONS: Record<string, any> = {
   GitHub,
   LinkedIn,
   CertificadoDigitalHouse,
-  CertificadoJupiDigital
+  CertificadoJupiDigital,
+  CertificadoDesafioLatamTest,
+  CertificadoDesafioLatamSQL,
 };
 
-const linkedInfo = profiles.find(({network}) => network === "LinkedIn");
+const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
 const linkedUrl = linkedInfo?.url;
 const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 ---
@@ -31,44 +35,80 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     <div class="header-content">
       <h1 class="header-name">{name}</h1>
       <h2 class="header-title">{label}</h2>
-      
+
       <div class="header-location">
         <Earth class="location-icon" />
         <span>{city}, {region}, {countryCode}</span>
       </div>
-      
+
       {postalCode && <p class="header-postal">CP: {postalCode}</p>}
-      
+
       <footer class="header-contacts-print">
         {printInfo}
       </footer>
-      
+
       <footer class="header-contacts">
-        {email && (
-          <a href={`mailto:${email}`} class="contact-link" title={`Email a ${name}`}>
-            <IconEmail class="contact-icon" />
-          </a>
-        )}
-        {phone && (
-          <a href={`tel:${phone}`} class="contact-link" title={`Llamar a ${name}`}>
-            <IconPhone class="contact-icon" />
-          </a>
-        )}
-        {profiles.map(({ network, url }) => {
-          const Icon = SOCIAL_ICONS[network];
-          return Icon && (
-            <a href={url} class="contact-link" title={`${network} de ${name}`}>
-              <Icon class="contact-icon" />
+        {
+          email && (
+            <a
+              href={`mailto:${email}`}
+              class="contact-link"
+              title={`Email a ${name}`}
+            >
+              <IconEmail class="contact-icon" />
             </a>
-          );
-        })}
+          )
+        }
+        {
+          phone && (
+            <a
+              href={`tel:${phone}`}
+              class="contact-link"
+              title={`Llamar a ${name}`}
+            >
+              <IconPhone class="contact-icon" />
+            </a>
+          )
+        }
+        {
+          profiles.map(({ network, url }) => {
+            const Icon = SOCIAL_ICONS[network];
+
+            // Soporta: componente .astro/.tsx | string URL | objeto { src }
+            const isUrlString = typeof Icon === "string";
+            const isUrlObject =
+              Icon && typeof Icon === "object" && "src" in Icon;
+            const imgSrc = isUrlString ? Icon : isUrlObject ? Icon.src : null;
+
+            return (
+              Icon && (
+                <a
+                  href={url}
+                  class="contact-link"
+                  title={`${network} de ${name}`}
+                >
+                  {imgSrc ? (
+                    <img
+                      src={imgSrc}
+                      alt={network}
+                      class="contact-icon"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <Icon class="contact-icon" />
+                  )}
+                </a>
+              )
+            );
+          })
+        }
       </footer>
     </div>
-    
+
     <figure class="header-avatar">
-      <img 
-        src={image} 
-        alt={`Foto de ${name}`} 
+      <img
+        src={image}
+        alt={`Foto de ${name}`}
         width="160"
         height="160"
         loading="eager"
@@ -163,12 +203,12 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
 
- .contact-icon {
-  width: 1.2rem;
-  height: 1.2rem;
-  min-width: 20px;
-  min-height: 20px;
-}
+  .contact-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    min-width: 20px;
+    min-height: 20px;
+  }
 
   .header-avatar {
     width: var(--avatar-size);
@@ -236,10 +276,11 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     }
     .header-title {
       font-size: 1rem;
-      margin-top: 0.20rem;
+      margin-top: 0.2rem;
     }
-    .header-location, .header-postal {
-      font-size: 0.70rem;
+    .header-location,
+    .header-postal {
+      font-size: 0.7rem;
     }
   }
 </style>
