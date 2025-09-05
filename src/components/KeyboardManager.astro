@@ -2,14 +2,14 @@
 import { basics } from "@cv";
 
 // TUS ICONOS (componentes .astro)
-import Facebook from "@/icons/Facebook.astro";
+
 import LinkedIn from "@/icons/LinkedIn.astro";
 // Ojo: en tu repo está escrito "GitHup.astro"
 import GitHubIcon from "@/icons/GitHup.astro";
 import Earth from "@/icons/Earth.astro";
 
 import CertificadoDigitalHouse from "@/icons/certificadoDigital.astro";
-import CertificadoJupiDigital from "@/icons/certificadoJupiDigital.astro";
+import CertificadoJupiDigital from "@/icons/jupiDigital.astro";
 import CertificadoDesafioLatamTest from "@/icons/certificadoDesafioLatamTest.astro";
 import CertificadoDesafioLatamSQL from "@/icons/certificadoDesafioLatamSQL.astro";
 
@@ -17,7 +17,7 @@ const { profiles = [] } = basics;
 
 // Mapa: nombre de `network` -> componente de icono
 const SOCIAL_ICONS: Record<string, any> = {
-  Facebook,
+
   GitHub: GitHubIcon, // por si en cv.json viene "GitHub"
   GitHup: GitHubIcon, // por si la key viene con el nombre del archivo
   LinkedIn,

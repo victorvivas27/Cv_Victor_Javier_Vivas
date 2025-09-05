@@ -4,19 +4,17 @@ import Section from "@/components/Section.astro";
 import IconEmail from "@/icons/IconEmail.astro";
 import IconPhone from "@/icons/IconPhone.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
-import Facebook from "@/icons/Facebook.astro";
 import GitHub from "@/icons/GitHup.astro";
 import Earth from "@/icons/Earth.astro";
 import CertificadoDigitalHouse from "@/icons/certificadoDigital.astro";
-import CertificadoJupiDigital from "@/icons/certificadoJupiDigital.astro";
+import CertificadoJupiDigital from "@/icons/jupiDigital.astro";
 import CertificadoDesafioLatamTest from "@/icons/certificadoDesafioLatamTest.astro";
 import CertificadoDesafioLatamSQL from "@/icons/certificadoDesafioLatamSQL.astro";
 
 const { name, label, image, email, phone, url, location, profiles } = basics;
-const { address, postalCode, city, countryCode, region } = location;
+const { postalCode, city, countryCode, region } = location;
 
 const SOCIAL_ICONS: Record<string, any> = {
-  Facebook,
   GitHub,
   LinkedIn,
   CertificadoDigitalHouse,
@@ -87,16 +85,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
                   class="contact-link"
                   title={`${network} de ${name}`}
                 >
-                  {imgSrc ? (
-                    <img
-                      src={imgSrc}
-                      alt={network}
-                      class="contact-icon"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <Icon class="contact-icon" />
-                  )}
+                  {imgSrc ? <img src={imgSrc} alt={network} /> : <Icon />}
                 </a>
               )
             );
@@ -106,25 +95,20 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     </div>
 
     <figure class="header-avatar">
-      <img
-        src={image}
-        alt={`Foto de ${name}`}
-        width="160"
-        height="160"
-        loading="eager"
-      />
+      <img src={image} alt={`Foto de ${name}`} />
     </figure>
   </div>
 </Section>
 
 <style>
   :root {
-    --primary-color: #2563eb;
+    --primary-color: #0051ff;
     --text-color: #1e293b;
     --text-secondary: #64748b;
     --border-color: #e2e8f0;
     --hover-bg: #f1f5f9;
-    --avatar-size: 140px; /* Más chico */
+    --avatar-size-desktop: 180px;
+    --avatar-size-mobile: 150px;
     --transition-speed: 0.2s;
   }
 
@@ -133,28 +117,12 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
-    max-width: 100%;
-  }
-
-  .header-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .header-name {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text-color);
-    margin: 0;
-    line-height: 1.2;
+    flex-wrap: wrap;
   }
 
   .header-title {
-    font-size: 1.15rem;
-    font-weight: 500;
+    font-size: 1.6rem;
+    font-weight: 450;
     color: var(--primary-color);
     margin: 0;
   }
@@ -183,6 +151,8 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     display: flex;
     gap: 0.5rem;
     margin-top: 0.5rem;
+    /* Added wrap for icons on small screens */
+    flex-wrap: wrap;
   }
 
   .contact-link {
@@ -203,21 +173,16 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
 
-  .contact-icon {
-    width: 1.2rem;
-    height: 1.2rem;
-    min-width: 20px;
-    min-height: 20px;
-  }
-
   .header-avatar {
-    width: var(--avatar-size);
-    height: var(--avatar-size);
+    width: var(--avatar-size-desktop);
+    height: var(--avatar-size-desktop);
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    /* Aligned avatar to the right on larger screens */
+    margin-left: auto;
   }
 
   .header-avatar:hover {
@@ -230,33 +195,47 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     object-fit: cover;
   }
 
-  /* Para impresión */
+  /* For printing */
   .header-contacts-print {
     display: none;
     font-size: 0.8rem;
     color: var(--text-secondary);
   }
 
-  @media (max-width: 768px) {
+  /* Mobile-specific styles */
+  @media (max-width: 700px) {
     .header-container {
-      flex-direction: column-reverse;
+      flex-direction: column;
       text-align: center;
-      gap: 1rem;
-    }
-    .header-content {
       align-items: center;
     }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
     .header-location {
       justify-content: center;
     }
-    .header-contacts {
-      justify-content: center;
-    }
+
     .header-name {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
+
     .header-title {
       font-size: 1rem;
+    }
+
+    .header-avatar {
+      width: var(--avatar-size-mobile);
+      height: var(--avatar-size-mobile);
+    }
+
+    .header-contacts {
+      justify-content: center;
     }
   }
 
