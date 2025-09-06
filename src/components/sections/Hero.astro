@@ -3,11 +3,11 @@ import { basics } from "@cv";
 import Section from "@/components/Section.astro";
 import IconEmail from "@/icons/IconEmail.astro";
 import IconPhone from "@/icons/IconPhone.astro";
-import LinkedIn from "@/icons/LinkedIn.astro";
+import LinkedIn from "@/icons/linkedin.png";
 import GitHub from "@/icons/GitHup.astro";
 import Earth from "@/icons/Earth.astro";
 import CertificadoDigitalHouse from "@/icons/certificadoDigital.astro";
-import CertificadoJupiDigital from "@/icons/jupiDigital.astro";
+import CertificadoJupiDigital from "@/icons/jupiDigital-02.png";
 import CertificadoDesafioLatamTest from "@/icons/certificadoDesafioLatamTest.astro";
 import CertificadoDesafioLatamSQL from "@/icons/certificadoDesafioLatamSQL.astro";
 
@@ -53,7 +53,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
               class="contact-link"
               title={`Email a ${name}`}
             >
-              <IconEmail class="contact-icon" />
+              <IconEmail class="contact-link" />
             </a>
           )
         }
@@ -64,7 +64,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
               class="contact-link"
               title={`Llamar a ${name}`}
             >
-              <IconPhone class="contact-icon" />
+              <IconPhone class="contact-link" />
             </a>
           )
         }
@@ -85,7 +85,11 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
                   class="contact-link"
                   title={`${network} de ${name}`}
                 >
-                  {imgSrc ? <img src={imgSrc} alt={network} /> : <Icon />}
+                  {imgSrc ? (
+                    <img class="contact-link" src={imgSrc} alt={network} />
+                  ) : (
+                    <Icon />
+                  )}
                 </a>
               )
             );
@@ -135,12 +139,6 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     font-size: 0.9rem;
   }
 
-  .location-icon {
-    width: 0.9rem;
-    height: 0.9rem;
-    color: var(--text-secondary);
-  }
-
   .header-postal {
     color: var(--text-secondary);
     font-size: 0.85rem;
@@ -149,21 +147,21 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 
   .header-contacts {
     display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    /* Added wrap for icons on small screens */
+    justify-content: space-evenly;
+    
+   margin:0.8rem;
     flex-wrap: wrap;
   }
 
   .contact-link {
-    width: 2.2rem;
-    height: 2.2rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    width: 2.8rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: 2px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
+
     transition: all var(--transition-speed) ease;
   }
 
@@ -178,7 +176,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
     height: var(--avatar-size-desktop);
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid white;
+    border: 3px solid rgb(65, 224, 2);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     /* Aligned avatar to the right on larger screens */
