@@ -4,41 +4,34 @@ import { basics } from "@cv";
 // TUS ICONOS (componentes .astro)
 
 import LinkedIn from "@/icons/LinkedIn.astro";
-// Ojo: en tu repo está escrito "GitHup.astro"
 import GitHubIcon from "@/icons/GitHup.astro";
 import Earth from "@/icons/Earth.astro";
-
 import CertificadoDigitalHouse from "@/icons/certificadoDigital.astro";
-import CertificadoJupiDigital from "@/icons/jupiDigital.astro";
+import CertificadoJupiDigital from "@/icons/jupiDigital-02.astro";
 import CertificadoDesafioLatamTest from "@/icons/certificadoDesafioLatamTest.astro";
 import CertificadoDesafioLatamSQL from "@/icons/certificadoDesafioLatamSQL.astro";
+import Printer from "@/icons/Printer.astro";
 
 const { profiles = [] } = basics;
 
 // Mapa: nombre de `network` -> componente de icono
 const SOCIAL_ICONS: Record<string, any> = {
-
-  GitHub: GitHubIcon, // por si en cv.json viene "GitHub"
-  GitHup: GitHubIcon, // por si la key viene con el nombre del archivo
+  GitHub: GitHubIcon,
+  GitHup: GitHubIcon,
   LinkedIn,
   CertificadoDigitalHouse,
   CertificadoJupiDigital,
   CertificadoDesafioLatamTest,
   CertificadoDesafioLatamSQL,
+  Printer,
 };
-
-// SVG de impresora (inline)
-const PRINTER_SVG = `
-<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-  <path fill="currentColor" d="M6 9V4h12v5h1a3 3 0 0 1 3 3v5h-4v3H6v-3H2v-5a3 3 0 0 1 3-3h1Zm2-3h8v3H8V6Zm8 11H8v3h8v-3Z"/>
-</svg>`;
 
 // Construimos los items desde tu cv.json
 const items = profiles.map(({ network, url }) => ({
   id: network,
   title: `Visitar ${network}`,
   url,
-  Icon: SOCIAL_ICONS[network] ?? Earth, // fallback a Earth si no hay icono
+  Icon: SOCIAL_ICONS[network] ?? Earth,
 }));
 
 // Agregamos el comando "Imprimir"
@@ -46,7 +39,7 @@ items.push({
   id: "print",
   title: "Imprimir página",
   url: "#",
-  Icon: null, // usamos el SVG inline
+  Icon: null,
 });
 ---
 
@@ -78,7 +71,7 @@ items.push({
           <li class="cp-item" data-id={it.id}>
             <span class="cp-icon">
               {it.id === "print" ? (
-                <span class="cp-icon-svg" set:html={PRINTER_SVG} />
+                <Printer class="cp-icon-svg" />
               ) : (
                 <it.Icon class="cp-icon-svg" />
               )}
@@ -198,7 +191,6 @@ items.push({
     color: var(--cp-text);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    font-weight: 700;
     display: none;
     align-items: center;
     justify-content: center;
@@ -211,15 +203,105 @@ items.push({
     transform: translateY(-1px);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4);
   }
-
-  @media (max-width: 720px) {
-    #cp-footer {
-      display: none;
-    }
-    .cp-fab {
-      display: flex;
-    }
+@media (max-width: 720px) {
+  /* Ocultar footer en móvil */
+  #cp-footer {
+    display: none;
   }
+
+  /* Botón flotante (⌘) más grande y visible */
+  .cp-fab {
+    display: flex;
+    width: 3.8rem;
+    height: 3.8rem;
+    font-size: 1.4rem;
+    background: #1a1f2d;
+    color: #ffffff;
+    border: 1px solid #3d4a64;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Backdrop con más contraste */
+  .cp-backdrop {
+    background: rgba(10, 12, 18, 0.92);
+    padding: 1.5rem;
+  }
+
+  /* Modal centrado y legible */
+  .cp-modal {
+    width: 92%;
+    max-width: 400px;
+    border-radius: 16px;
+    padding: 1.2rem 1rem;
+    background: #1a1f2d;
+    border: 1px solid #2e374a;
+  }
+
+  /* Título del modal */
+  .cp-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0.5rem 0 1.2rem;
+    color: #ffffff;
+  }
+
+  /* Lista vertical con más espacio táctil */
+  .cp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  /* Ítems más grandes y con fondo suave */
+  .cp-item {
+    grid-template-columns: 48px 1fr;
+    padding: 0.75rem 0.6rem;
+    border-radius: 12px;
+    background: #242b3a;
+    border: 1px solid #384052;
+    transition: all 0.15s ease;
+  }
+  .cp-item:hover {
+    background: #2f384c;
+    transform: translateY(-1px);
+  }
+
+  /* Íconos más grandes */
+  .cp-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #30394e;
+    border: 1px solid #455066;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Escala de los íconos dentro del modal */
+  .cp-icon img,
+  .cp-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Texto táctil y claro */
+  .cp-link,
+  .cp-btn {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #90b8ff;
+    text-align: left;
+  }
+
+  .cp-link:hover,
+  .cp-btn:hover {
+    color: #c7dcff;
+  }
+}
 
   /* Backdrop + modal */
   .cp-backdrop {
@@ -230,7 +312,7 @@ items.push({
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+  
   }
   .cp-hidden {
     display: none;
@@ -257,18 +339,9 @@ items.push({
     cursor: pointer;
     color: var(--cp-muted);
   }
-  .cp-title {
-    margin: 0.2rem 0 1rem;
-    font-size: 1.15rem;
-    font-weight: 800;
-    letter-spacing: 0.1px;
-  }
+  
 
-  .cp-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+ 
   .cp-item {
     display: grid;
     grid-template-columns: 40px 1fr;
@@ -292,19 +365,13 @@ items.push({
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background: var(--cp-icon-bg);
-    border: 1px solid var(--cp-icon-border);
+   border: 1px solid var(--cp-icon-border);
   }
-  .cp-icon-svg {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-  }
+  
 
   .cp-link {
     background: none;
     border: none;
-    padding: 0;
     color: var(--cp-primary);
     cursor: pointer;
     font: inherit;

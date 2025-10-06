@@ -1,0 +1,70 @@
+---
+import Section from "@/components/Section.astro";
+import { keywordsATS } from "@cv";
+---
+
+<Section title="">
+  <div class="keywords-container">
+    <div class="keywords-grid">
+      {keywordsATS.map((keyword) => (
+        <span class="keyword-pill">{keyword}</span>
+      ))}
+    </div>
+  </div>
+</Section>
+
+<style>
+  /* === ESTRUCTURA GENERAL === */
+  .keywords-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .keywords-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem; /* Menor espacio entre keywords */
+  }
+
+  .keyword-pill {
+    font-size: 0.65rem;
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid #e2e8f0;
+  }
+
+  /* === IMPRESIÓN === */
+  @media print {
+    .keywords-container {
+      gap: 0.25rem; /* Más compacto */
+      page-break-inside: avoid;
+    }
+
+    .keywords-grid {
+      gap: 0.2rem;
+    }
+
+    .keyword-pill {
+      font-size: 0.65rem;
+      background: transparent !important;
+      color: #000 !important;
+      border: 1px solid #ccc !important;
+      padding: 0.15rem 0.5rem;
+      border-radius: 12px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+
+  /* === RESPONSIVE === */
+  @media screen and (max-width: 768px) {
+    .keyword-pill {
+      font-size: 0.6rem;
+      padding: 0.15rem 0.4rem;
+    }
+  }
+</style>

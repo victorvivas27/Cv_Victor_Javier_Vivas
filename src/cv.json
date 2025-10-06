@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Victor Javier Vivas",
-    "label": "Data Analyst | Qlik Sense | Power Bi | Java | Spring Boot | Test Automation Engineer",
+    "label": "QA Automation Engineer & Data Analyst | Playwright | Power BI | Java | SQL | Spring Boot",
     "image": "/victor-04.png",
     "email": "victorjaviervivas@gmail.com",
     "phone": "+56986348085",
     "url": "",
-    "summary": "Soy una persona que desde muy joven ha trabajado en distintos ámbitos, lo que me permitió desarrollar principios sólidos como la honestidad, la puntualidad, el compromiso y la búsqueda constante de calidad en todo lo que hago. Me considero autodidacta y de rápido aprendizaje, siempre dispuesto a asumir nuevos desafíos y a mejorar procesos, especialmente cuando se trata de tareas repetitivas en las que encuentro formas más eficientes de hacer las cosas. Me motiva aportar valor a los equipos con los que trabajo, contribuir al crecimiento de los proyectos y mantener una mentalidad de mejora continua. Mi mayor fortaleza está en la capacidad de adaptarme, aprender y superarme día a día, combinando mis valores personales con la pasión por la tecnología para generar resultados que marquen la diferencia.",
+    "summary": "Profesional orientado a la tecnología con experiencia en análisis de datos y automatización de pruebas. Autodidacta, adaptable y con mentalidad de mejora continua. He trabajado en proyectos utilizando Power BI, Qlik Sense, Java, Spring Boot, Playwright y Cypress. Me especializo en optimizar procesos repetitivos mediante la automatización, desarrollando soluciones eficientes y escalables bajo metodologías ágiles como Scrum. Apasionado por la calidad del software, los datos y la mejora continua.",
     "location": {
       "address": "",
       "postalCode": "7550000",
@@ -59,29 +59,16 @@
       "position": "Pasantía como Test Automation Engineer",
       "url": "",
       "startDate": "2025-08-18",
-      "endDate": "",
-      "summary": "",
-      "highlights": [
-        "Participación en el desarrollo de aplicaciones utilizando Java y Spring Boot.",
-        "Colaboración con un equipo interdisciplinario para diseñar soluciones efectivas y escalables.",
-        "Aplicación de buenas prácticas de desarrollo, como control de versiones y pruebas unitarias.",
-        "Adquisición de experiencia en metodologías ágiles y herramientas de colaboración en entornos de desarrollo profesional."
-      ]
+      "endDate": "2025-10-01",
+      "summary": "Pasantía en Globant Chile enfocada en la automatización de pruebas UI y API. Participé en dos proyectos principales donde definimos frameworks y herramientas para testing automatizado. Para UI implementé Playwright con Cucumber y Gherkin bajo el enfoque BDD (Behavior Driven Development). En las pruebas de API utilicé Bruno y Jest con SuperTest para validar endpoints REST. También asistí a charlas y mentorías sobre DevOps, QA, Data y Test Gamer, conociendo cómo la inteligencia artificial se integra en los procesos de calidad en Globant y cómo los profesionales junior se incorporan al ecosistema ágil."
     },
-    
     {
       "name": "Globant Chile",
       "position": "Pasantía como Desarrollador Java",
       "url": "",
       "startDate": "2024-10-17",
       "endDate": "2024-12-19",
-      "summary": "Realice una  pasantía en Globant Chile como Desarrollador Java.Experimentado con tecnologías como Java y Spring Boot, aprendiendo sobre estructura de datos, pruebas unitarias y Spring Security. También he tenido contacto con metodologías ágiles como Scrum. A lo largo de la pasantía, he contado con el apoyo de mentores, lo que me ha permitido conocer nuevas herramientas y mejorar mis habilidades.",
-      "highlights": [
-        "Participación en el desarrollo de aplicaciones utilizando Java y Spring Boot.",
-        "Colaboración con un equipo interdisciplinario para diseñar soluciones efectivas y escalables.",
-        "Aplicación de buenas prácticas de desarrollo, como control de versiones y pruebas unitarias.",
-        "Adquisición de experiencia en metodologías ágiles y herramientas de colaboración en entornos de desarrollo profesional."
-      ]
+      "summary": "Pasantía en Globant Chile como Desarrollador Java dentro de equipos ágiles (Scrum). Desarrollé microservicios con Spring Boot y expuse APIs REST. Implementé pruebas unitarias con JUnit, control de seguridad con Spring Security y manejo de dependencias mediante Maven. Utilicé Git para control de versiones y participé en revisiones de código orientadas a buenas prácticas de clean code y calidad del software."
     },
     {
       "name": "CNH Industrial",
@@ -89,26 +76,7 @@
       "url": "",
       "startDate": "2012-10-01",
       "endDate": "2020-02-01",
-      "summary": "Participé en la fabricación de maquinaria agrícola y de construcción, especializado en la aplicación de pintura en cabina para acabados de alta calidad aplicando World Class Manufacturing (WCM)",
-      "highlights": [
-        "Aplicación de pinturas y recubrimientos en cabina, asegurando acabados uniformes y duraderos.",
-        "Mantenimiento y calibración de equipos de pintura para garantizar un rendimiento óptimo.",
-        "Control de calidad del trabajo final, incluyendo la inspección de acabados y corrección de imperfecciones.",
-        "Colaboración en la implementación de mejoras en los procesos de pintura para aumentar la eficiencia y reducir el desperdicio."
-      ]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": [
-        "Awarded 'Volunteer of the Month'"
-      ]
+      "summary": "Operario especializado en aplicación de pintura industrial para maquinaria agrícola y de construcción, siguiendo estándares de calidad World Class Manufacturing (WCM). Responsable del mantenimiento, calibración de equipos y control de calidad en el acabado final, asegurando durabilidad y uniformidad en los productos."
     }
   ],
   "education": [
@@ -116,86 +84,51 @@
       "institution": "Desafío Latam",
       "url": "https://desafiolatam.com/data-analytics/",
       "area": "Data Analytics",
-      "studyType": "Bootcamp intensivo orientado a análisis de datos, SQL, Python, estadísticas e inteligencia artificial.",
+      "studyType": "Bootcamp intensivo orientado al análisis de datos, SQL, Python, estadísticas e inteligencia artificial. Enfocado en la interpretación de datos, visualización y toma de decisiones basadas en métricas.",
       "startDate": "2025-06-24",
       "endDate": "",
       "score": "",
-      "courses": [
-        ""
-      ]
+      "courses": [""]
     },
     {
       "institution": "Desafío Latam",
       "url": "https://desafiolatam.com/fundamentos-test-automation-engineer",
       "area": "Test Automation Engineer",
-      "studyType": "Bootcamp intensivo orientado a la automatización de pruebas web, API y móviles.",
+      "studyType": "Bootcamp intensivo centrado en la automatización de pruebas web, API y móviles, utilizando Playwright, Postman y Selenium. Incluye fundamentos de QA, BDD y CI/CD.",
       "startDate": "2025-06-17",
       "endDate": "2025-08-25",
       "score": "",
-      "courses": [
-        ""
-      ]
+      "courses": [""]
     },
     {
       "institution": "JupiDigital",
       "url": "https://www.jupidigital.com/",
       "area": "Data Analytics",
-      "studyType": "Analista de datos tiene la habilidad de explorar, interpretar y comprender datos para crear reportes visuales y comunicarlos a modo de información que sirva para la toma de decisiones",
+      "studyType": "Programa orientado al análisis, limpieza e interpretación de datos mediante Power BI, Qlik Sense y SQL. Creación de dashboards y reportes visuales para soporte en la toma de decisiones empresariales.",
       "startDate": "2024-07-21",
       "endDate": "2024-12-13",
       "score": "",
-      "courses": [
-        ""
-      ]
+      "courses": [""]
     },
     {
       "institution": "DIGITAL HOUSE",
-      "url": "https://www.digitalhouse.com/productos/programacion/certified-tech-developer?utm_source=Sendgrid&utm_medium=email&utm_campaign=Inscripcion&utm_term=certificaciones&utm_content=certificaciones-ctaboton-Certificaciones40off",
-      "area": "Certified Tech Develoment",
-      "studyType": "Es una iniciativa educativa co-creada por Digital House, Mercado Libre y Globant.",
+      "url": "https://www.digitalhouse.com/productos/programacion/certified-tech-developer",
+      "area": "Certified Tech Developer",
+      "studyType": "Carrera co-creada por Digital House, Mercado Libre y Globant. Enfocada en fundamentos de programación, desarrollo full stack, bases de datos y metodologías ágiles.",
       "startDate": "2022-10-01",
       "endDate": "2024-09-01",
       "score": "",
-      "courses": [
-        ""
-      ]
+      "courses": [""]
     },
     {
       "institution": "ISADA",
       "url": "http://www.isada.edu.ar/",
       "area": "Secundario",
-      "studyType": "Bachiller con Orientación en Economía y Administración",
+      "studyType": "Bachiller con orientación en Economía y Administración.",
       "startDate": "2020-02-01",
       "endDate": "2023-05-01",
       "score": "",
-      "courses": [
-        ""
-      ]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
+      "courses": [""]
     }
   ],
   "skills": [
@@ -205,14 +138,20 @@
       "keywords": [
         "Testing Fundamentals",
         "QA Tools Setup",
-        "Web Test Automation (Cypress, Selenium)",
-        "API Testing (Postman, SuperTest)",
-        "BDD with Playwright",
+        "Web Test Automation",
+        "Cypress",
+        "Selenium",
+        "API Testing",
+        "Postman",
+        "SuperTest",
+        "BDD",
+        "Playwright",
         "Mobile Test Automation",
-        "CI/CD, Docker, Cloud Testing"
+        "CI/CD",
+        "Docker",
+        "Cloud Testing"
       ]
     },
-    
     {
       "name": "Qlik Sense",
       "level": "Beginner",
@@ -232,38 +171,19 @@
         "Business Intelligence",
         "Reporting",
         "Dashboards",
-        "DAX",
         "Power Query"
       ]
     },
-    {
-      "name": "Snowflake",
-      "level": "Beginner",
-      "keywords": [
-        "Cloud Data Warehouse",
-        "SQL",
-        "Data Integration",
-        "ETL",
-        "Data Modeling",
-        "Scalable Storage"
-      ]
-    },
+  
     {
       "name": "Database Management",
       "level": "Intermediate",
-      "keywords": [
-        "MySQL"
-      ]
+      "keywords": ["MySQL", "SQL Queries", "Database Optimization"]
     },
     {
       "name": "Web Development",
       "level": "Advanced",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React"
-      ]
+      "keywords": ["HTML", "CSS", "JavaScript", "React", "Responsive Design"]
     },
     {
       "name": "Backend Development",
@@ -271,60 +191,45 @@
       "keywords": [
         "Java",
         "Spring Boot",
+        "REST API",
+        "JUnit",
         "Postman",
-        "Git"
+        "Git",
+        "Maven"
       ]
     },
     {
       "name": "DevOps",
       "level": "Beginner",
-      "keywords": [
-        "Docker",
-        "AWS",
-        "CI/CD"
-      ]
+      "keywords": ["Docker", "AWS", "CI/CD", "GitHub Actions", "Pipeline Automation"]
     },
     {
       "name": "Security",
       "level": "Beginner",
-      "keywords": [
-        "Authentication",
-        "Authorization"
-      ]
+      "keywords": ["Authentication", "Authorization", "Spring Security"]
     }
   ],
   "languages": [
     {
       "language": "Español",
       "fluency": "Nativo"
-    }
-  ],
-  "interests": [
+    },
     {
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Doe",
-      "reference": "Reference…"
+      "language": "Inglés",
+      "fluency": "Intermedio técnico (lectura y escritura)"
     }
   ],
   "projects": [
     {
       "name": "Music House",
       "isActive": true,
-      "description": "Plataforma full-stack para alquiler de instrumentos musicales. Backend en Spring Boot con JWT, paginación, caché y base de datos PostgreSQL; frontend en React con Vite, Material UI y gestión de imágenes en AWS S3.",
+      "description": "Plataforma full-stack para alquiler de instrumentos musicales. Backend en Spring Boot con JWT, paginación, caché (Caffeine) y base de datos PostgreSQL. Frontend desarrollado en React con Vite y Material UI. Implementación de gestión de imágenes con AWS S3 y despliegue en Railway.",
       "highlights": [
         "Spring Boot + JWT + Caffeine Cache",
         "PostgreSQL",
         "React + Vite + Material UI",
         "Gestión de imágenes en AWS S3",
-        "Calendario dinámico para reservas",
+        "Calendario dinámico de reservas",
         "Calificación: 10/10"
       ],
       "url": "https://musichouse.up.railway.app/"
@@ -332,9 +237,10 @@
     {
       "name": "Tienda Super Héroes",
       "isActive": true,
-      "description": "Sitio web estático desarrollado con HTML y CSS. Incluye página de inicio y formulario de contacto, enfocado en diseño visual y estructura semántica.",
+      "description": "Sitio web estático desarrollado con HTML5 y CSS3, enfocado en diseño visual, semántica y estructura accesible. Incluye página de inicio y formulario de contacto validado.",
       "highlights": [
         "HTML5 y CSS3",
+        "Diseño semántico y responsive",
         "Optimización de maquetado web",
         "Calificación: 10/10"
       ],
@@ -343,10 +249,11 @@
     {
       "name": "Tienda Pet Shop",
       "isActive": true,
-      "description": "Proyecto de tienda de mascotas enfocado en HTML, CSS y JavaScript. Agrega validaciones de formularios y mensajes dinámicos para mejorar la experiencia de usuario.",
+      "description": "Proyecto web interactivo para tienda de mascotas, desarrollado con HTML, CSS y JavaScript. Incluye validaciones de formularios y mensajes dinámicos para mejorar la experiencia del usuario.",
       "highlights": [
-        "Validación de formularios con JavaScript",
+        "Validaciones con JavaScript",
         "HTML5, CSS3 y diseño responsive",
+        "Interactividad dinámica",
         "Calificación: 10/10"
       ],
       "url": "https://victorvivas27.github.io/pet-shop/"
@@ -354,14 +261,44 @@
     {
       "name": "Clínica Odontológica",
       "isActive": true,
-      "description": "Aplicación React para gestión de pacientes, usando rutas protegidas, contexto global con useReducer y localStorage para manejo de favoritos.",
+      "description": "Aplicación React para gestión de pacientes. Implementa rutas protegidas, contexto global con useReducer y persistencia de datos en localStorage. Permite gestionar favoritos y navegación segura.",
       "highlights": [
         "React Router DOM",
         "Context API + useReducer",
         "Persistencia en localStorage",
+        "Gestión de usuarios y rutas protegidas",
         "Calificación: 10/10"
       ],
       "url": "https://clinicaodontologicaexamenfrontend3.netlify.app/"
     }
+  ],
+  "keywordsATS": [
+    "QA Automation Engineer",
+    "Playwright",
+    "Cucumber",
+    "Gherkin",
+    "BDD",
+    "Selenium",
+    "Cypress",
+    "SuperTest",
+    "Postman",
+    "API Testing",
+    "Java",
+    "Spring Boot",
+    "JUnit",
+    "REST API",
+    "SQL",
+    "ETL",
+    "Power BI",
+    "Qlik Sense",
+    "Data Analytics",
+    "Docker",
+    "AWS",
+    "Git",
+    "Agile",
+    "Scrum",
+    "CI/CD",
+    "Test Automation",
+    "Software Quality Assurance"
   ]
 }
