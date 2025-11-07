@@ -223,7 +223,7 @@
     {
       "name": "Music House",
       "isActive": true,
-      "description": "Plataforma full-stack para alquiler de instrumentos musicales. Backend en Spring Boot con JWT, paginación, caché (Caffeine) y base de datos PostgreSQL. Frontend desarrollado en React con Vite y Material UI. Implementación de gestión de imágenes con AWS S3 y despliegue en Railway.",
+      "description": "Aplicación full-stack para alquiler de instrumentos musicales, desarrollada con Spring Boot + React + PostgreSQL (Neon) + AWS S3. Despliegue automatizado con GitHub Actions y hosting en Google Cloud.",
       "highlights": [
         "Spring Boot + JWT + Caffeine Cache",
         "PostgreSQL",
@@ -232,7 +232,7 @@
         "Calendario dinámico de reservas",
         "Calificación: 10/10"
       ],
-      "url": "https://musichouse.up.railway.app/"
+      "url": "https://music-house-frontend-1064623639221.us-central1.run.app/"
     },
     {
       "name": "Tienda Super Héroes",
